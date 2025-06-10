@@ -7,23 +7,23 @@ public class IncomeTaxCalculator {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please Enter your income:");
         int income = sc.nextInt();
-        if (income <= 500000) {
+        if (income <= 500) {
             System.out.println("No tax");        // 0
-        } else if (income >= 500000 && income<= 1000000) {
-            System.out.println("Tax is 5%");
-            System.out.println("your tax is" + (income * 0.05));
-        } else if (income>=100000 && income<= 2000000) {
+        } else if (income>=500 &&  income<= 1000) {
+            System.out.println("Tax on taxable income is 5%");
+            System.out.println("your tax is" + (income - 500)* 0.05);
+        } else if (income>=1000 && income<= 2000) {
             System.out.println("Tax is 10%");
-            System.out.println("your tax is" + (income * 0.1));
+            System.out.println("your tax is" + (income-500) * 0.1);
             // 1000
-        } else if (income>=200000 && income<= 3000000){
+        } else if (income>=2000 && income<= 3000){
             System.out.println("Tax is 20%");
-            System.out.println("your tax is" + (income * 0.2));
+            System.out.println("your tax is" + (income-500) * 0.2);
             // 1500
-        } else if(income>= 30000) {
+        } else {
             System.out.println("Tax is 30%");
-            System.out.println("your tax is" + (income * 0.3));
+            System.out.println("your tax is" + (income-500) * 0.3);
         }
     }
-    ;
+
 }
